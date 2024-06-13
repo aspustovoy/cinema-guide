@@ -1,0 +1,13 @@
+.appPage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  z-index: 0;
+  background: var(--background-black);
+}
+
+.main {
+  flex: 1 0 auto;
+  z-index: -1;
+}

@@ -1,0 +1,138 @@
+@font-face {
+  font-family: 'Play';
+  src: url('./fonts/play-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Play';
+  src: url('./fonts/play-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+:root {
+  --font-family: 'Play', sans-serif;
+  --background-white: #fff;
+  --background-black: #0a0b0b;
+  --background-black-disabled: #747474;
+  --background-brand-disabled: #d6d2f1;
+  --content-secondary: rgba(255, 255, 255, 0.7);
+  --background-brand-hovered: #8577e1;
+  --content-placeholder: rgba(0, 0, 0, 0.4);
+  --content-active: #b4a9ff;
+  --background-brand-active: #6a5dc2;
+  --content-black: #000;
+  --background-secondary: #393b3c;
+  --background-disabled: rgba(255, 255, 255, 0.5);
+  --content-disabled: rgba(255, 255, 255, 0.5);
+  --content-primary: #fff;
+}
+
+/* glob */
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 80px;
+  max-width: 1440px;
+}
+
+.title {
+  margin: 0;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.btn-primary {
+  padding: 16px 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--content-placeholder);
+  border-radius: 28px;
+  background: var(--background-brand-active);
+  font-weight: 700;
+  font-family: var(--font-family);
+  font-size: 18px;
+  line-height: 133%;
+  color: var(--content-primary);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: var(--background-brand-hovered);
+}
+
+.btn-secondary {
+  padding: 16px 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--content-placeholder);
+  border-radius: 28px;
+  background: var(--background-secondary);
+  font-weight: 700;
+  font-family: var(--font-family);
+  font-size: 18px;
+  line-height: 133%;
+  color: var(--content-primary);
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background: var(--background-white);
+  color: var(--content-black);
+}
+
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+
+@media (max-width: 769px) {
+  .container {
+    padding: 0 20px;
+  }
+}

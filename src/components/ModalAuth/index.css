@@ -1,0 +1,48 @@
+.overlay-auth {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-auth {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 24px;
+  padding: 64px 40px;
+  width: 420px;
+  background: var(--background-white);
+}
+
+.modal-auth__btn-close {
+  position: absolute;
+  top: 0;
+  right: -71px;
+}
+
+.modal-auth__logo {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  width: 180px;
+}
+
+@media (max-width: 769px) {
+  .modal-auth {
+    overflow-y: scroll;
+    width: 335px;
+    padding: 64px 20px 32px 20px;
+  }
+
+  .modal-auth__btn-close {
+    right: 0;
+  }
+
+  .modal-auth__logo {
+    margin-bottom: 32px;
+  }
+}

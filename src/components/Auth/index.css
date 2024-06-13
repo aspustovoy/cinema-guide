@@ -1,0 +1,124 @@
+.login__form {
+  display: none;
+}
+
+.login__form--visible {
+  display: block;
+}
+
+.login__wrapper {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.login__wrapper::before {
+  position: absolute;
+  content: '';
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  z-index: -1;
+  transition: border 0.3s ease-in-out;
+}
+
+.login__wrapper--warning::before {
+  border: 2px solid #ff7575;
+}
+
+.login__icon {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  fill: black;
+  transition: fill 0.3s ease-in-out;
+}
+
+.login__icon--warning {
+  fill: #ff7575;
+}
+
+.login__wrapper:focus-within::before {
+  border: 2px solid var(--content-active);
+}
+
+.login__wrapper:focus-within svg {
+  fill: var(--content-active);
+}
+
+.login__wrapper:hover svg {
+  fill: var(--content-active);
+}
+
+.login__wrapper:hover::before {
+  border: 2px solid var(--content-active);
+}
+
+.login__title {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 24px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  color: var(--content-black);
+}
+
+.login__text {
+  display: inline-block;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 133%;
+  text-align: center;
+  color: var(--content-black);
+}
+
+.login__input {
+  padding: 16px 52px;
+  border: 1px solid var(--content-placeholder);
+  border-radius: 8px;
+  width: 100%;
+  height: 56px;
+  background: var(--background-white);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 133%;
+  color: var(--content-black);
+}
+
+.login__input:focus-visible {
+  outline: none;
+}
+
+.login__input::placeholder {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 133%;
+  color: var(--content-placeholder);
+}
+
+.login__btn {
+  margin-top: 12px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.login__link {
+  display: block;
+  margin: 0 auto;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  color: var(--content-black);
+}
+
+.login__error {
+  color: #ff7575;
+}

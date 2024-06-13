@@ -1,0 +1,150 @@
+.overlay-trailer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 11, 11, 0.9);
+}
+
+.modal-trailer {
+  border: 1px solid var(--content-disabled);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 960px;
+  height: 540px;
+  background: var(--background-secondary);
+  transform: translate(-50%, -50%);
+}
+
+.modal-trailer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -72px;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.modal-trailer:hover .modal-trailer__play-icon {
+  display: block;
+}
+
+.modal-trailer:hover .modal-trailer__btn-close {
+  display: block;
+}
+
+.modal-trailer:hover .modal-trailer__title {
+  display: block;
+}
+
+.modal-trailer__play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-trailer__play-icon--unvisible {
+  display: none;
+}
+
+.modal-trailer__title {
+  position: absolute;
+  bottom: 24px;
+  left: 20px;
+  padding: 24px 40px;
+  width: 920px;
+  min-height: 80px;
+  background: rgba(10, 11, 11, 0.5);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  color: var(--content-primary);
+}
+
+.modal-trailer__title--unvisible {
+  display: none;
+}
+
+.modal-trailer__btn-close {
+  position: absolute;
+  top: 0;
+  right: -71px;
+}
+
+.modal-trailer__btn-close--unvisible {
+  display: none;
+}
+
+.modal-trailer__container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.spinner svg {
+  animation: 1s linear 0s normal none infinite running rot;
+}
+
+@media (max-width: 1025px) {
+  .modal-trailer {
+    width: 100%;
+    height: auto;
+  }
+
+  .modal-trailer__container {
+    aspect-ratio: 16/9;
+    max-height: 100vh;
+  }
+
+  .modal-trailer__btn-close {
+    top: 8px;
+    right: 8px;
+  }
+
+  .modal-trailer__btn-close svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .modal-trailer__play-icon svg {
+    width: 64px;
+    height: 64px;
+  }
+
+  .modal-trailer__title {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 72px;
+    font-size: 18px;
+  }
+
+  @media (max-width: 600px) {
+    .modal-trailer__title {
+      bottom: -96px;
+      left: 0;
+      min-height: 96px;
+    }
+  }
+}
